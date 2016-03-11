@@ -10,7 +10,7 @@ It currently supports:
 - Query results table
 - Save results as CSV
 
-It's still quite immature and as such is quite brittle. That being said, it has been immensely useful for me.
+It's still quite immature and as such is quite brittle. The innitial code was written over a weekened, so it is all kind of thrown together and needs refactoring. That being said, it has been immensely useful for me.
 
 ## Running
 
@@ -36,6 +36,8 @@ Little stuff:
 - Allow saving and opening queries.
 - Add vim bindings.
 - Save data with or without headers.
+- Add a "working" animation while fetching long queries.
+- Improve how errors are displayed.
 
 Bigger stuff:
 - Ability to edit values
