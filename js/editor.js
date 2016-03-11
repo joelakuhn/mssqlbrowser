@@ -7,11 +7,13 @@ $(function() {
     lineNumbers: true,
     matchBrackets : true,
     autofocus: true,
-    extraKeys: {"Ctrl-Space": "autocomplete"},
-    hintOptions: {tables: {
-      users: {name: null, score: null, birthDate: null},
-      countries: {name: null, population: null, size: null}
-    }}
+    // extraKeys: {"Ctrl-Space": "autocomplete"},
+    keyMap: 'vim',
+    showCursorWhenSelecting: true,
+    // hintOptions: {tables: {
+    //   users: {name: null, score: null, birthDate: null},
+    //   countries: {name: null, population: null, size: null}
+    // }}
   });
 
   var q = localStorage.q;

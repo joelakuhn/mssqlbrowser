@@ -7,12 +7,17 @@
 
 <script src="lib/keypress/keypress-2.1.3.min.js"></script>
 
-<script src="lib/code-mirror/code-mirror.js"></script>
-<script src="lib/code-mirror/show-hint.js"></script>
-<script src="lib/code-mirror/sql-hint.js"></script>
-<script src="lib/code-mirror/sql.js"></script>
-<link href="lib/code-mirror/code-mirror.css" rel="stylesheet" />
-<link href="lib/code-mirror/show-hint.css" rel="stylesheet" />
+<script src="lib/codemirror/code-mirror.js"></script>
+<script src="lib/codemirror/show-hint.js"></script>
+<script src="lib/codemirror/sql-hint.js"></script>
+<script src="lib/codemirror/sql.js"></script>
+<script src="lib/codemirror/addon/dialog/dialog.js"></script>
+<script src="lib/codemirror/addon/search/searchcursor.js"></script>
+<script src="lib/codemirror/addon/edit/matchbrackets.js"></script>
+<script src="lib/codemirror/keymap/vim.js"></script>
+<link href="lib/codemirror/addon/dialog/dialog.css" rel="stylesheet" />
+<link href="lib/codemirror/code-mirror.css" rel="stylesheet" />
+<link href="lib/codemirror/show-hint.css" rel="stylesheet" />
 
 <script src="lib/chosen/chosen.jquery.min.js"></script>
 <link rel="stylesheet" href="lib/chosen/chosen.min.css" />
@@ -49,6 +54,7 @@
 
     <div class="main-top query-section col-flex-container">
       <textarea id="query" class="query-box"></textarea>
+      <div style="font-size: 13px; width: 300px; height: 30px;">Key buffer: <span id="command-display"></span></div>
     </div>
 
     <div class="main-bottom">

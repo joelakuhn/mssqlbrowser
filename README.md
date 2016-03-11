@@ -34,7 +34,6 @@ Little stuff:
 - Mark tables that are not accessible.
 - Make multiple editor tabs per database connection.
 - Allow saving and opening queries.
-- Add vim bindings.
 - Save data with or without headers.
 - Add a "working" animation while fetching long queries.
 - Improve how errors are displayed.
@@ -42,6 +41,7 @@ Little stuff:
 Bigger stuff:
 - Ability to edit values
 - Table structure and relation management
+- Add settings menu (to choose keybindings and stuff)
 
 Stuff I'm not sure about:
 - Add table and cell name completion.
