@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+.row-flex-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+.col-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.center-content {
+  align-content: center;
+  justify-content: center;
+}
+.sidebar {
+  flex: 1;
+}
+.main-container {
+  flex: 4;
+}
+.main-top {
+  flex: 1;
+  position: relative;
+}
+.main-bottom {
+  flex: 1;
+  overflow: auto;
+}
+.sidebar-list-wrapper {
+  overflow: auto;
+}
+.btn {
+  border-radius: 5px;
+  padding: 5px 8px;
+  color: #fff;
+  z-index: 5;
+}
+.btn.btn-green {
+  background: #2e9979;
+  border: 1px solid #38a081;
+}
+.sidebar {
+  background-color: #2e9979;
+}
+.sidebar {
+  overflow: auto;
+}
+.database-selector-container {
+  padding: 10px 10px 14px 10px;
+}
+.database-selector-container .chosen-container {
+  width: 100% !important;
+}
+.chosen-container-single .chosen-single {
+  background: transparent;
+  border: 1px solid #fff;
+  box-shadow: none;
+  color: #fff;
+  height: 24px;
+  font-size: 12px;
+  border-radius: 17px;
+  line-height: 1.4em;
+}
+.chosen-container-single .chosen-single span {
+  padding: 3px;
+}
+.chosen-with-drop .chosen-single {
+  color: #333;
+}
+.sidebar-list-wrapper {
+  height: 100%;
+}
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  color: #fff;
+  margin: 0;
+}
+.sidebar-list li {
+  padding: 8px 10px;
+  border-bottom: 1px solid #fff;
+  font-size: 12px;
+  max-width: 250px;
+  word-wrap: break-word;
+  -webkit-user-select: none;
+}
+.sidebar-list li:hover {
+  background-color: rgba(255,255,255,0.1);
+  cursor: pointer;
+}
+.filtered {
+  display: none;
+}
+.sidebar-list-header {
+  border-bottom: 1px solid #fff;
+  flex-shrink: 0;
+}
+#sidebar-list-filter {
+  background: transparent;
+  border: 0;
+  font-size: 13px;
+  padding: 8px 10px;
+  width: 100%;
+  color: #fff;
+}
+#sidebar-list-filter::-webkit-input-placeholder {
+  color: #c4e5dd;
+}
+.sidebar-toolbar {
+  height: 35px;
+  flex-shrink: 0;
+  background-color: #338069;
+}
+.sidebar {
+  background-color: #2e9979;
+}
+.connections {
+  max-width: 300px;
+  align-self: center;
+}
+.connections input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+.connections hr {
+  margin: 0;
+  margin-bottom: 10px;
+  border: 0;
+  border-top: 1px solid #b0b0b0;
+}

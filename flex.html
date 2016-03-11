@@ -1,0 +1,63 @@
+<html>
+<head>
+<style>
+
+body {
+  margin: 0;
+}
+
+.row-flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.col-flex-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.sidebar {
+  flex: 1;
+  background-color: #9fbcd4;
+}
+
+.main-container {
+  flex: 4;
+}
+
+.main-top {
+  background-color: #48cf39;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.main-bottom {
+  background-color: #9fcde8;
+  flex: 1;
+  flex-grow: 1;
+}
+
+.top-content {
+  height: 300px;
+}
+
+</style>
+</head>
+<body>
+<div class="row-flex-container">
+  <div class="sidebar">
+
+  </div>
+  <div class="main-container">
+    <div class="col-flex-container">
+      <div class="main-top">
+        <div class="top-content">
+        </div>
+      </div>
+      <div class="main-bottom">
+      </div>
+    </div>
+  </div>
+</div>
+</body>

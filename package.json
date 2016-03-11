@@ -1,0 +1,20 @@
+{
+  "name": "MSSQL_Browser",
+  "main": "index.html",
+  "version": "0.0.2",
+  "window": {
+    "show": false,
+    "position": "center",
+    "width": 1024,
+    "height": 700,
+    "toolbar": true,
+    "icon": "img/icon.icns"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-stylus": "^2.1.1"
+  },
+  "dependencies": {
+    "mssql": "^2.3.2"
+  }
+}

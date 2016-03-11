@@ -1,0 +1,108 @@
+@require('./variables.styl')
+@require('./resets.styl')
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.tabs {
+}
+
+iframe {
+  flex: 1;
+  height: 100%;
+}
+
+
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  height: 34px;
+  background-color: $dark_gray;
+  border-bottom: 4px solid $green
+}
+
+.tab {
+  color: #FFF;
+  font-size: 12px;
+  line-height: 1em;
+  padding: 8px 0;
+  padding-right: 6px;
+  margin: 1px 3px;
+  background-color: $medium_gray;
+  white-space: nowrap
+  border-right: 12px solid $medium_gray;
+  border-left: 12px solid $medium_gray;
+  cursor: default;
+  overflow: hidden;
+}
+
+.tab.active {
+  background-color: $green;
+  border-right: 12px solid $green;
+  border-left: 12px solid $green;
+  margin-bottom: 0;
+  padding-bottom: 9px;
+  margin-top: 0
+  padding-top: 9px;
+}
+
+.close-btn {
+  float: left;
+
+  width: 16px;
+  height: 16px;
+  margin-right: 6px;
+  margin-top: -2px;
+  padding: 3px;
+  border-radius: 10px;
+
+  font-size: 8px;
+  text-align: center;
+  line-height: 12px;
+}
+
+.close-btn:before {
+  content: '\2715';
+}
+
+.close-btn:hover {
+  background-color: $red;
+}
+
+
+.add-tab {
+  background-color: $medium_gray;
+  font-size: 14px;
+  line-height: 1em
+  padding: 8px
+  width: 30px;
+  box-sizing: border-box;
+  text-align: center
+  color: #FFF;
+  font-weight: bold
+  cursor: default
+  margin-left: auto
+}
+
+.add-tab.active {
+  background-color: $green;
+}
+
+.flex-fill {
+  width: 100%
+}
+
+
+// windows
+
+iframe {
+  display: none;
+}
+
+iframe.active {
+  display: block;
+}

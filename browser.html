@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>MSSQL Browser</title>
+
+<script src="lib/jquery-2.1.4.js"></script>
+
+<script src="lib/keypress/keypress-2.1.3.min.js"></script>
+
+<script src="lib/code-mirror/code-mirror.js"></script>
+<script src="lib/code-mirror/show-hint.js"></script>
+<script src="lib/code-mirror/sql-hint.js"></script>
+<script src="lib/code-mirror/sql.js"></script>
+<link href="lib/code-mirror/code-mirror.css" rel="stylesheet" />
+<link href="lib/code-mirror/show-hint.css" rel="stylesheet" />
+
+<script src="lib/chosen/chosen.jquery.min.js"></script>
+<link rel="stylesheet" href="lib/chosen/chosen.min.css" />
+
+<script src="js/keyboard-shortcuts.js"></script>
+<script src="js/mevent.js"></script>
+<script src="js/sql.js"></script>
+<script src="js/query.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/sidebar.js"></script>
+
+<link rel="stylesheet" href="css/browser.css" />
+
+</head>
+<body>
+
+<div class="row-flex-container">
+  <div id="sidebar" class="sidebar col-flex-container">
+    <div class="database-selector-container">
+      <select id="database-selector" class="chosen-select" data-placeholder="Select a Database"></select>
+    </div>
+    <div class="sidebar-list-header">
+      <input id="sidebar-list-filter" type="text" placeholder="Tables" />
+    </div>
+    <div class="sidebar-list-wrapper">
+      <ul id="sidebar-list" class="sidebar-list">
+
+      </ul>
+    </div>
+    <div class="sidebar-toolbar">
+    </div>
+  </div>
+  <div class="main-container col-flex-container">
+
+    <div class="main-top query-section col-flex-container">
+      <textarea id="query" class="query-box"></textarea>
+    </div>
+
+    <div class="main-bottom">
+      <div class="results-section" id="output"></div>
+    </div>
+
+    <div class="toolbar">
+      <button id="go" class="btn btn-green">&#x25B6;</button>
+      <button id="save" class="btn btn-green">save</button>
+    </div>
+
+  </div>
+</div>
+</body>
+</html>
