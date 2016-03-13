@@ -1,62 +1,53 @@
-.results-section {
+.results-section
   font-size: 12px;
-}
 
-.results-section table {
-  table-layout: auto;
-  min-width: 100%;
-  padding: 10px;
-  vertical-align: top;
-  border-collapse: collapse;
-}
+  table
+    table-layout: auto;
+    min-width: 100%;
+    padding: 10px;
+    vertical-align: top;
+    border-collapse: collapse;
 
-.results-section th {
-  text-align: left;
-  cursor: pointer;
-}
+  th
+    text-align: left;
+    cursor: pointer;
 
-.results-section th::after {
-  content: ' \25BC';
-  color: transparent;
-}
+  th::after
+    content: ' \25BC';
+    color: transparent;
 
-.results-section .sort-asc::after {
-  content: ' \25BC';
-  color: #000
-}
+  .sort-asc::after
+    content: ' \25BC';
+    color: #000
 
-.results-section .sort-desc::after {
-  content: ' \25B2';
-  color: #000
-}
+  .sort-desc::after
+    content: ' \25B2';
+    color: #000
 
-.results-section td, .results-section th {
-  padding: 3px 5px;
+  td, th
+    padding: 3px 5px;
+    white-space: nowrap;
+
+  tr:nth-child(odd)
+    background-color: #f7f7f7;
+
+  tr:nth-child(1)
+    background-color: #fff;
+    border-bottom: 1px solid #dfdfdf
+    display: block
+    position: fixed
+    margin-top: 0
+
+
+
+
+  .message
+    padding: 10px;
+
+  .error
+    color: $red
+
+
+
+.type-datetime
   white-space: nowrap;
-}
-
-.results-section tr:nth-child(odd) {
-  background-color: #f7f7f7;
-}
-
-.results-section tr:nth-child(1) {
-  background-color: #fff;
-  border-bottom: 1px solid #dfdfdf
-}
-
-
-
-
-.results-section .message {
-  padding: 10px;
-}
-
-.results-section .error {
-  color: $red
-}
-
-
-
-.type-datetime {
-  white-space: nowrap;
-}

@@ -48,19 +48,21 @@
   margin: 0;
 }
 
-.sidebar-list li {
+.sidebar-list li
   padding: 8px 10px;
   border-bottom: 1px solid #FFF;
   font-size: 12px;
   max-width: 250px;
   word-wrap: break-word;
   -webkit-user-select: none
-}
 
-.sidebar-list li:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  cursor: pointer;
-}
+  &.disabled
+    background-color: $muted_green
+    color: $muted_green_text
+
+  &:hover
+    background-color: rgba(255, 255, 255, 0.1);
+    cursor: pointer;
 
 .filtered {
   display: none;

@@ -43,7 +43,9 @@ Bigger stuff:
 - Table structure and relation management
 - Add settings menu (to choose keybindings and stuff)
 
+Really big stuff:
+- Import tables from csv and possibly other file types
+
 Stuff I'm not sure about:
 - Add table and cell name completion.
 - Context aware completion.
-- Sticky headers in the data table

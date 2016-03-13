@@ -1,7 +1,10 @@
-function run_query() {
+function run_query(callback) {
   var q = editor.getValue();
   localStorage.q = q;
   sql.query(q, function(err, data) {
+    if (callback && callback(err, data) === false) {
+      return;
+    }
     if (err) {
       show_message(JSON.stringify(err));
       show_error(err.message + ' at ' + err.lineNumber);
@@ -13,8 +16,8 @@ function run_query() {
       $('#output').empty();
       var table = create_table(data);
       table.appendTo('#output');
+      table.stickyHeaders();
     }
-
   });
 }
 

@@ -33,10 +33,17 @@ body {
   position: relative;
 }
 .main-bottom {
+  display: flex;
   flex: 1;
-  overflow: auto;
 }
 .sidebar-list-wrapper {
+  overflow: auto;
+  flex-direction: column;
+}
+.scroll-container {
+  flex: 1;
+  width: 100%;
+  position: relative;
   overflow: auto;
 }
 .btn {
@@ -93,6 +100,10 @@ body {
   max-width: 250px;
   word-wrap: break-word;
   -webkit-user-select: none;
+}
+.sidebar-list li.disabled {
+  background-color: #71ae9c;
+  color: #dae7e3;
 }
 .sidebar-list li:hover {
   background-color: rgba(255,255,255,0.1);

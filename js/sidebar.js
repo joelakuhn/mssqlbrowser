@@ -1,5 +1,3 @@
-
-
 // Fetch the list of databases.
 sql.onconnect.success(function() {
   var get_databases_query = 'SELECT name FROM sys.databases d WHERE d.database_id > 4';
@@ -67,8 +65,21 @@ function bind_table_links() {
   $('#sidebar-list li').click(function() {
     var table_name = $(this).text();
     editor.setValue('select top 100 * from ' + table_name);
-    run_query();
+    list_item = this;
+    run_query(function(err, data) {
+      if (err) {
+        $(list_item).addClass('disabled')
+        return false;
+      }
+    });
   });
+}
+
+function set_table_disabled(name) {
+  $('#sidebar-list li').filter(function() {
+    return $(this).text() == name;
+  })
+  .addClass('disabled')
 }
 
 sql.onconnect.success(function() {
