@@ -2,6 +2,8 @@
 <head>
   <script src="lib/jquery-2.1.4.js"></script>
 
+  <script src="js/util.js"></script>
+
   <!-- Ractive -->
   <script src="lib/ractive/ractive.min.js"></script>
 
@@ -26,7 +28,7 @@
         <ul id="sidebar-list" class="sidebar-list"></ul>
         <script id="sidebar-list-template" type="text/html">
           {{#connections}}
-            <li on-click="select_connection">{{ nickname }}</li>
+            <li on-click="select_connection" on-dblclick="open_connection">{{ nickname }}</li>
           {{/connections}}
         </script>
       </div>
@@ -45,12 +47,11 @@
         <input type="password" placeholder="Password" value="{{ connection.password }}" />
         <input type="text"     placeholder="Database" value="{{ connection.database }}" />
 
-        <button id="open"   class="btn btn-green">Connect</button>
-        <button id="save"   class="btn btn-green">Save</button>
-        <button id="delete" class="btn btn-red">Delete</button>
+        <button id="open"   class="btn btn-green" on-click="connect">Connect</button>
+        <button id="save"   class="btn btn-green" on-click="save">Save</button>
+        <button id="delete" class="btn btn-red" on-click="delete">Delete</button>
 
-        <div id="message" class="message">
-        </div>
+        <div class="message">{{ connect_message }}</div>
       </script>
     </div>
   </div>
