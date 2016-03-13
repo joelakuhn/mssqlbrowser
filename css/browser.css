@@ -92,7 +92,11 @@ body {
 }
 .btn.btn-green {
   background: #2e9979;
-  border: 1px solid #38a081;
+  border: 1px solid #2e9979;
+}
+.btn.btn-red {
+  background: #ca4747;
+  border: 1px solid #ca4747;
 }
 .query-section {
   border-bottom: 1px solid #dfdfdf;
@@ -159,7 +163,7 @@ body {
   padding: 10px;
 }
 .results-section .error {
-  color: #c56f5f;
+  color: #ca4747;
 }
 .type-datetime {
   white-space: nowrap;

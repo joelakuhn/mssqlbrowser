@@ -54,7 +54,11 @@ body {
 }
 .btn.btn-green {
   background: #2e9979;
-  border: 1px solid #38a081;
+  border: 1px solid #2e9979;
+}
+.btn.btn-red {
+  background: #ca4747;
+  border: 1px solid #ca4747;
 }
 .sidebar {
   background-color: #2e9979;

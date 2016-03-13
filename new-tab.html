@@ -2,6 +2,9 @@
 <head>
   <script src="lib/jquery-2.1.4.js"></script>
 
+  <!-- Ractive -->
+  <script src="lib/ractive/ractive.min.js"></script>
+
   <script src="lib/keypress/keypress-2.1.3.min.js"></script>
 
   <script src="js/mevent.js"></script>
@@ -20,30 +23,35 @@
         <input id="sidebar-list-filter" type="text" placeholder="Connections" />
       </div>
       <div class="sidebar-list-wrapper">
-        <ul id="sidebar-list" class="sidebar-list">
-
-        </ul>
+        <ul id="sidebar-list" class="sidebar-list"></ul>
+        <script id="sidebar-list-template" type="text/html">
+          {{#connections}}
+            <li on-click="select_connection">{{ nickname }}</li>
+          {{/connections}}
+        </script>
       </div>
     </div>
     <div class="main-container col-flex-container center-content">
-      <div class="connections">
+      <div id="tab-info" class="connections"></div>
 
-        <input id="nickname" type="text" placeholder="Nickname" />
+      <script id="tab-info-template" type="text/html">
+        <input type="text" placeholder="Nickname" value="{{ connection.nickname }}" />
 
         <hr>
 
-        <input id="server"   type="text"     placeholder="Server"   />
-        <input id="instance" type="text"     placeholder="Instance" />
-        <input id="user"     type="text"     placeholder="User"     />
-        <input id="password" type="password" placeholder="Password" />
-        <input id="database" type="text"     placeholder="Database" />
+        <input type="text"     placeholder="Server"   value="{{ connection.server }}"   />
+        <input type="text"     placeholder="Instance" value="{{ connection.instance }}" />
+        <input type="text"     placeholder="User"     value="{{ connection.user }}"     />
+        <input type="password" placeholder="Password" value="{{ connection.password }}" />
+        <input type="text"     placeholder="Database" value="{{ connection.database }}" />
 
-        <button id="open" class="btn btn-green">Connect</button>
-        <button id="save" class="btn btn-green">Save</button>
+        <button id="open"   class="btn btn-green">Connect</button>
+        <button id="save"   class="btn btn-green">Save</button>
+        <button id="delete" class="btn btn-red">Delete</button>
 
         <div id="message" class="message">
         </div>
-      </div>
+      </script>
     </div>
   </div>
 </body>
