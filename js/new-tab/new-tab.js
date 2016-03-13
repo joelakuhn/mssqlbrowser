@@ -29,10 +29,18 @@ editor_ui = new Ractive({
 
 var sidebar_ui = new Ractive({
   data: {
-    connections: get_saved_connections()
+    filter: '',
+    connections: get_saved_connections(),
+    filtered_connections: function() {
+      var filter = new RegExp(this.get('filter').toLowerCase(), 'i')
+      var matching = this.get('connections').filter(function(conn) {
+        return conn.nickname.match(filter);
+      });
+      return matching;
+    }
   },
-  el: '#sidebar-list',
-  template: '#sidebar-list-template'
+  el: '#sidebar',
+  template: '#sidebar-template'
 })
 
 function new_tab(config) {
@@ -46,7 +54,6 @@ function new_tab(config) {
     }
   });
 }
-
 
 $('#sidebar-list-filter').keyup(function() {
   var filter = new RegExp($(this).val().toLowerCase(), 'i');

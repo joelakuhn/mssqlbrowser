@@ -20,19 +20,19 @@
 <body>
   <div class="row-flex-container">
 
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar"></div>
+    <script id="sidebar-template" type="text/html">
       <div class="sidebar-list-header">
         <input id="sidebar-list-filter" type="text" placeholder="Connections" />
       </div>
       <div class="sidebar-list-wrapper">
-        <ul id="sidebar-list" class="sidebar-list"></ul>
-        <script id="sidebar-list-template" type="text/html">
-          {{#connections}}
+        <ul class="sidebar-list">
+          {{#filtered_connections()}}
             <li on-click="select_connection" on-dblclick="open_connection">{{ nickname }}</li>
           {{/connections}}
-        </script>
+        </ul>
       </div>
-    </div>
+    </script>
     <div class="main-container col-flex-container center-content">
       <div id="tab-info" class="connections"></div>
 
