@@ -55,18 +55,6 @@ function new_tab(config) {
   });
 }
 
-$('#sidebar-list-filter').keyup(function() {
-  var filter = new RegExp($(this).val().toLowerCase(), 'i');
-  $('.sidebar-list li').each(function() {
-    if ($(this).text().match(filter)) {
-      $(this).removeClass('filtered');
-    }
-    else {
-      $(this).addClass('filtered');
-    }
-  });
-});
-
 /* EDITOR EVENTS */
 
 editor_ui.on({
